@@ -18,6 +18,12 @@
 
 ###  create webpack.config.js
 
-###  npm i -D @babel/core babel-loader @babel/preset-react
+###  npm i @babel/core babel-loader @babel/preset-react
 
 ###  npm i -D html-webpack-plugin
+
+###  add index.css
+
+###  npm i css-loader
+
+###  npm i mini-css-extract-plugin
