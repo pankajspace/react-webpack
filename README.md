@@ -27,3 +27,5 @@
 ###  npm i css-loader
 
 ###  npm i mini-css-extract-plugin
+
+### download and add fonts

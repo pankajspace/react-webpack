@@ -37,6 +37,10 @@ module.exports = {
           "css-loader"  //reads the contents of css file and returns js representation
         ]
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      }
     ]
   },
   plugins: [
