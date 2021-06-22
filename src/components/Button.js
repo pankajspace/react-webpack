@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 
 import "./Button.css";
-import Text from "./Text";
+
+const Text = React.lazy(() => import('./Text'));
 
 export default function Button() {
   const [showText, setShowText] = useState(false)
@@ -12,7 +13,9 @@ export default function Button() {
         className="button"
         onClick={() => setShowText(!showText)}
       >Click Me</button>
-      {showText && <Text />}
+      <Suspense fallback={<div>Loading...</div>}>
+        {showText && <Text />}
+      </Suspense>
     </>
   )
 }
