@@ -31,3 +31,5 @@
 ### download and add fonts
 
 ### npm i webpack-bundle-analyzer
+
+### npm i sass sass-loader
