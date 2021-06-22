@@ -1,14 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: { main: "./src/index.js" },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "./dist"),
-    publicPath: ""
+    publicPath: "",
+    clean: true
   },
   devServer: {
     open: true,
@@ -17,6 +19,27 @@ module.exports = {
     index: "index.html",
     port: 9000,
     writeToDisk: true
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        reactMain: {
+          test: /[\\/]node_modules[\\/](react)[\\/]/,
+          name: 'reactMain',
+          chunks: 'all',
+        },
+        reactDom: {
+          test: /[\\/]node_modules[\\/](react-dom)[\\/]/,
+          name: 'reactDom',
+          chunks: 'all',
+        },
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    }
   },
   module: {
     rules: [
@@ -44,11 +67,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "public/index.html"
-    }),
     new MiniCssExtractPlugin({
-      filename: "[name].styles.css"
-    })
+      filename: "[name].css"
+    }),
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+      inject: true
+    }),
+    new BundleAnalyzerPlugin()
   ]
 }
