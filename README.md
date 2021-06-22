@@ -29,3 +29,5 @@
 ###  npm i mini-css-extract-plugin
 
 ### download and add fonts
+
+### npm i webpack-bundle-analyzer
