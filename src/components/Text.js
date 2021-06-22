@@ -1,9 +1,11 @@
 import React from "react";
 
+import "./Text.scss"
+
 export default function Text() {
   return (
     <>
-      <div>Hello World!</div>
+      <div className="text">Hello World!</div>
     </>
   )
 }

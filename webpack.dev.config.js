@@ -39,6 +39,14 @@ module.exports = {
         ]
       },
       {
+        test: /\.(scss)$/,
+        use: [
+          MiniCssExtractPlugin.loader,  //extracts css file from bundle.js into separate css file
+          "css-loader",  //reads the contents of css file and returns js representation
+          "sass-loader"  //reads the contents of scss file and returns css representation
+        ]
+      },
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource', //similar to file-loader
       }
