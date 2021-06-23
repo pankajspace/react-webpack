@@ -4,7 +4,7 @@ import "./Button.css";
 import { ErrorBoundary } from "./ErrorBoundary";
 const Text = React.lazy(() => import('./Text'));
 
-export default function Button() {
+export function Button() {
   const [showText, setShowText] = useState(false)
 
   // throw new Error();  //uncomment this to see how ErrorBoundary looks.
@@ -21,3 +21,5 @@ export default function Button() {
     </ErrorBoundary>
   )
 }
+
+export default Button;

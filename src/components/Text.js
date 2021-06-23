@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import "./Text.scss";
 import { ErrorBoundary } from "./ErrorBoundary";
 
-export default function Text() {
-
+export function Text() {
   import("../utils/utils").then(utils => {
     let sum = utils.sum(5, 10);
     setResult(sum);
@@ -20,3 +19,5 @@ export default function Text() {
     </ErrorBoundary>
   )
 }
+
+export default Text;
