@@ -13,7 +13,7 @@ export default function Button() {
         className="button"
         onClick={() => setShowText(!showText)}
       >Click Me</button>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="loading">Loading...</div>}>
         {showText && <Text />}
       </Suspense>
     </>
