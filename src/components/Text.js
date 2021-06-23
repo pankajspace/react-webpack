@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./Text.scss";
+import { ErrorBoundary } from "./ErrorBoundary";
 
 export default function Text() {
 
@@ -10,10 +11,12 @@ export default function Text() {
   });
 
   const [result, setResult] = useState(0);
+  
+  // throw new Error();  //uncomment this to see how ErrorBoundary looks.
 
   return (
-    <>
+    <ErrorBoundary>
       <div className="text">Sum is: {result} </div>
-    </>
+    </ErrorBoundary>
   )
 }
