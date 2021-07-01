@@ -33,3 +33,5 @@
 ### npm i webpack-bundle-analyzer
 
 ### npm i sass sass-loader
+
+# TODO: meaningful chunk names
