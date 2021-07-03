@@ -34,4 +34,4 @@
 
 ### npm i sass sass-loader
 
-# TODO: meaningful chunk names
+### npm i eslint babel-eslint eslint-plugin-react
