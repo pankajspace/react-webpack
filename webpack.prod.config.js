@@ -27,17 +27,14 @@ module.exports = {
           test: /[\\/]node_modules[\\/](react)[\\/]/,
           name: 'reactMain',
           chunks: 'all',
+          minSize: 0
         },
         reactDom: {
           test: /[\\/]node_modules[\\/](react-dom)[\\/]/,
           name: 'reactDom',
           chunks: 'all',
-        },
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
+          minSize: 0
+        }
       },
     }
   },
