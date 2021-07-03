@@ -2,7 +2,7 @@ import React, { useState, Suspense } from "react";
 
 import "./Button.css";
 import { ErrorBoundary } from "./ErrorBoundary";
-const Text = React.lazy(() => import('./Text'));
+const Text = React.lazy(() => import(/* webpackChunkName: "Text" */ './Text'));
 
 export function Button() {
   const [showText, setShowText] = useState(false)

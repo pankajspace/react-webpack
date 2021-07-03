@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 
 import "./App.css";
 import { ErrorBoundary } from "./components/ErrorBoundary";
-const Button = React.lazy(() => import('./components/Button'));
+const Button = React.lazy(() => import(/* webpackChunkName: "Button" */ './components/Button'));
 
 export default function App() {
   return (
