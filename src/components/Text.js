@@ -4,7 +4,7 @@ import "./Text.scss";
 import { ErrorBoundary } from "./ErrorBoundary";
 
 export function Text() {
-  import("../utils/utils").then(utils => {
+  import(/* webpackChunkName: "utils" */ "../utils/utils").then(utils => {
     let sum = utils.sum(5, 10);
     setResult(sum);
   });
