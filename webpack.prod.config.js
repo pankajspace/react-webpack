@@ -20,7 +20,8 @@ module.exports = {
     contentBase: path.resolve(__dirname, "./dist"),
     index: "index.html",
     port: 9090,
-    writeToDisk: true
+    writeToDisk: true,
+    historyApiFallback: true
   },
   optimization: {
     splitChunks: {

@@ -19,7 +19,8 @@ module.exports = {
     contentBase: path.resolve(__dirname, "./dist"),
     index: "index.html",
     port: 8080,
-    writeToDisk: true
+    writeToDisk: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
