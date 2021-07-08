@@ -9,7 +9,7 @@ const TileContainer = styled.div`
   padding: 3rem;
   border: .1rem solid grey;
   border-radius: 1rem;
-  box-shadow: .1rem 0 .1rem red, -.1rem 0 1rem red;;
+  box-shadow: 0rem 0rem 1rem black;
   background-color: aliceblue;
 `;
 
