@@ -14,6 +14,9 @@ module.exports = {
     publicPath: "",
     clean: true
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devServer: {
     open: true,
     hot: true,
