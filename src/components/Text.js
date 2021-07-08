@@ -5,17 +5,17 @@ import { ErrorBoundary } from "./ErrorBoundary";
 
 export function Text() {
   import(/* webpackChunkName: "utils" */ "../utils/utils").then(utils => {
-    let sum = utils.sum(5, 10);
-    setResult(sum);
+    let hello = utils.hello();
+    setResult(hello);
   });
 
   const [result, setResult] = useState(0);
-  
+
   // throw new Error();  //uncomment this to see how ErrorBoundary looks.
 
   return (
     <ErrorBoundary>
-      <div className="text">Sum is: {result} </div>
+      <div className="text"> {result} </div>
     </ErrorBoundary>
   )
 }
