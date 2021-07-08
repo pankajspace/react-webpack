@@ -35,3 +35,5 @@
 ### npm i sass sass-loader
 
 ### npm i eslint babel-eslint eslint-plugin-react
+
+### npm i styled-components
