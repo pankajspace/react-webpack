@@ -36,7 +36,7 @@ module.exports = {
           minSize: 0
         },
         vendors: {
-          test: /[\\/]node_modules[\\/](styled-components)[\\/]/,
+          test: /[\\/]node_modules[\\/](styled-components|react-router)[\\/]/,
           name: 'vendors',
           chunks: 'all',
           minSize: 0
