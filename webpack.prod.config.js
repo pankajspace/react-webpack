@@ -29,15 +29,15 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        reactMain: {
-          test: /[\\/]node_modules[\\/](react)[\\/]/,
-          name: 'reactMain',
+        react: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'react',
           chunks: 'all',
           minSize: 0
         },
-        reactDom: {
-          test: /[\\/]node_modules[\\/](react-dom)[\\/]/,
-          name: 'reactDom',
+        vendors: {
+          test: /[\\/]node_modules[\\/](styled-components)[\\/]/,
+          name: 'vendors',
           chunks: 'all',
           minSize: 0
         }
@@ -89,6 +89,6 @@ module.exports = {
       template: "public/index.html",
       inject: true
     }),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   ]
 }
