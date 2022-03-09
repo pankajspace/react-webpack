@@ -40,5 +40,4 @@
 
 ### npm i react-router-dom
 
-### https://firxworx.com/blog/coding/react-testing-library-with-jest-installation-and-configuration/#:~:text=%20Installation%20and%20Configuration%20of%20React%20Testing%20Library,file%20to%20the%20root%20of%20your...%20More%20
 
